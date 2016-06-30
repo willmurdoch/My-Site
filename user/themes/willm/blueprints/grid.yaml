@@ -30,7 +30,7 @@ form:
                   type: title
                   label: Title
                 .blurb:
-                  type: text
+                  type: textarea
                   label: Blurb
                 .image:
                   type: pagemediaselect

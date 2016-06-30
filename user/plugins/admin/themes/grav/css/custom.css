@@ -32,7 +32,7 @@ body {
 }
 
 .content-padding {
-	background: #131313 url(../images/background.jpg) center no-repeat;
+	background: #131313;
 	background-size: cover;
 }
 

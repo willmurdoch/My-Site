@@ -84,13 +84,31 @@ body {
 #logo {
 	width: 100px;
 	float: left;
+	position: relative;
+}
+
+#logo:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	background: #0e2056;
+	border-radius: 100%;
+	display: block;
+	transform-origin: center;
+	-webkit-transform-origin: center;
+	transform: scale(0.5);
+	-webkit-transform: scale(0.9);
+	transition: all 0.2s ease-out;
 }
 
 #logo svg {
 	width: 100%;
 	height: auto;
 	transform: scale(1);
-	transition: all 0.3s ease-out;
+	transition: all 0.2s ease-out;
 }
 
 #logo svg #letter1, #logo svg #letter2 {
@@ -99,8 +117,12 @@ body {
 	animation: logoPop 0.4s ease-out forwards;
 }
 
+#logo:hover:before {
+	transform: scale(1);
+}
+
 #logo:hover svg {
-	transform: rotate(180deg) scale(0.9);
+	transform: scale(0.75) translateY(5px);
 }
 
 nav {

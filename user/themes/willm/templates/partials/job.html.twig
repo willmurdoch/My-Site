@@ -1,0 +1,45 @@
+{% if page.active %}
+	<section class="split">
+		<div class="textWrap">
+			{% if page.header.displayTitle %}
+				<h2>{{ page.header.displayTitle }}</h2>
+			{% else %}
+				<h2>{{ page.title }}</h2>
+			{% endif %}
+			{{ page.content }}
+		</div>
+		{% if page.media.images %}
+			<img src="{{ page.media.images|first.url }}" />
+		{% endif %}
+	</section>
+
+{% else %}
+	<section class="job">
+		<div class="textWrap">
+			{% if page.header.displayTitle %}
+				<h2>{{ page.header.displayTitle }}</h2>
+			{% else %}
+				<h2>{{ page.title }}</h2>
+			{% endif %}
+			{{ page.content }}
+			<a class="cta" href="{{ page.url }}">Learn More</a>
+		</div>
+		<div class="devices">
+			{% if page.header.desktop == 1 %}
+			<div class="device desktop">
+				<img src="{{ page.url }}/{{ page.header.desktopImage }}" />
+			</div>
+			{% endif %}
+			{% if page.header.tablet == 1 %}
+			<div class="device tablet">
+				<img src="{{ page.url }}/{{ page.header.tabletImage }}" />
+			</div>
+			{% endif %}
+			{% if page.header.mobile == 1 %}
+			<div class="device mobile">
+				<img src="{{ page.url }}/{{ page.header.mobileImage }}" />
+			</div>
+			{% endif %}
+		</div>
+	</section>
+{% endif %}

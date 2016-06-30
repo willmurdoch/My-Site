@@ -1,14 +1,8 @@
 <!--Markup for standalone module page-->
 {% if page.template == 'grid' %}
 	{% include 'partials/grid.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}
-{% elseif page.template == 'backgrounder' %}
-	{% include 'partials/backgrounder.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}
-{% elseif page.template == 'split' %}
-	{% include 'partials/split.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}
-{% elseif page.template == 'vidbg' %}
-		{% include 'partials/vidbg.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}
-{% elseif page.template == 'vidpopup' %}
-		{% include 'partials/vidpopup.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}
+{% elseif page.template == 'job' %}
+	{% include 'partials/job.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}
 {% else %}
 	<p>AAA</p>
 {% endif %}
