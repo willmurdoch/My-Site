@@ -250,18 +250,6 @@ header {
 	padding: 10rem 0;
 }
 
-header video {
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	left: 0;
-	z-index: 0;
-	object-fit: cover;
-}
-
 header .textWrap {
 	font-size: 1rem;
 	text-align: center;
@@ -293,17 +281,6 @@ header .textWrap h2 span:not(.divider) {
 header .textWrap h2 span.divider {
 	font-weight: 100;
 	color: #6f8ee8;
-}
-
-header .textWrap p {
-	margin: 1rem 0;
-}
-
-@media (max-width: 720px) {
-	header .textWrap p {
-		text-align: center;
-		margin: 0 auto;
-	}
 }
 
 /*----------Buttons------------*/
@@ -437,46 +414,71 @@ section.top:after {
 	border-bottom: 1px solid #e1e1e1;
 }
 
-section .textWrap {
+.devices {
+	width: 100%;
+}
+
+.devices .device {
+	position: relative;
+	display: inline-block;
+}
+
+.devices .device .screen {
+	position: absolute;
+	z-index: 0;
+}
+
+.devices .device .wrap {
 	position: relative;
 	z-index: 1;
-	display: inline-block;
-	vertical-align: middle;
+	max-width: 100%;
 }
 
-section img {
-	display: inline-block;
-	vertical-align: middle;
-	max-width: 400px;
-	margin-left: 3rem;
+.devices .device.desktop {
+	max-width: 90%;
 }
 
-@media (max-width: 720px) {
-	section img {
-		max-width: 100%;
-		margin: 2rem auto 0;
-	}
+.devices .device.desktop + .mobile {
+	margin-left: -9%;
+	z-index: 2;
 }
 
-section video + .textWrap {
-	color: #FFF;
+.devices .device.desktop .wrap {
+	width: 700px;
 }
 
-section video {
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	left: 0;
-	z-index: 0;
-	object-fit: cover;
+.devices .device.desktop .screen {
+	width: 76%;
+	top: 7%;
+	left: 12%;
 }
 
-section.backgrounder h2, section.backgrounder p {
-	color: #FFF;
-	text-shadow: 0px 0px 10px #000;
+.devices .device.mobile {
+	max-width: 60%;
+}
+
+.devices .device.mobile .wrap {
+	width: 180px;
+}
+
+.devices .device.mobile .screen {
+	width: 92.2%;
+	left: 4%;
+	top: 11%;
+}
+
+.devices .device.tablet {
+	max-width: 60%;
+}
+
+.devices .device.tablet .wrap {
+	width: 100%;
+}
+
+.devices .device.tablet .screen {
+	width: 86%;
+	left: 7%;
+	top: 5%;
 }
 
 footer {

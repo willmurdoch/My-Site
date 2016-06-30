@@ -22,22 +22,25 @@
 				<h2>{{ page.title }}</h2>
 			{% endif %}
 			{{ page.content }}
-			<a class="cta" href="{{ page.url }}">Learn More</a>
+			<a class="cta" target="_blank" href="{{ page.header.url }}">See More</a>
 		</div>
 		<div class="devices">
 			{% if page.header.desktop == 1 %}
 			<div class="device desktop">
-				<img src="{{ page.url }}/{{ page.header.desktopImage }}" />
+				<img class="screen" src="{{ page.url }}/{{ page.header.desktopImage }}" />
+				<img class="wrap" src="{{ theme_url }}/images/laptop.png" />
 			</div>
 			{% endif %}
 			{% if page.header.tablet == 1 %}
 			<div class="device tablet">
-				<img src="{{ page.url }}/{{ page.header.tabletImage }}" />
+				<img class="screen" src="{{ page.url }}/{{ page.header.tabletImage }}" />
+				<img class="wrap" src="{{ theme_url }}/images/tablet.png" />
 			</div>
 			{% endif %}
 			{% if page.header.mobile == 1 %}
 			<div class="device mobile">
-				<img src="{{ page.url }}/{{ page.header.mobileImage }}" />
+				<img class="screen" src="{{ page.url }}/{{ page.header.mobileImage }}" />
+				<img class="wrap" src="{{ theme_url }}/images/smartphone.png" />
 			</div>
 			{% endif %}
 		</div>

@@ -211,16 +211,6 @@ header
 	overflow: hidden
 	padding: 10rem 0
 
-	video
-		position: absolute
-		width: 100vw
-		height: 100vh
-		top: 50%
-		transform: translateY(-50%)
-		-webkit-transform: translateY(-50%)
-		left: 0
-		z-index: 0
-		object-fit: cover
 	.textWrap
 		font-size: 1rem
 		text-align: center
@@ -241,11 +231,6 @@ header
 			span.divider
 				font-weight: 100
 				color: #6f8ee8
-		p
-			margin: 1rem 0
-			@media (max-width: $smartphone)
-				text-align: center
-				margin: 0 auto
 
 /*----------Buttons------------*/
 .cta
@@ -321,36 +306,45 @@ section
 			bottom: 0
 			border-bottom: 1px solid #e1e1e1
 
-	.textWrap
+.devices
+	width: 100%
+	.device
 		position: relative
-		z-index: 1
 		display: inline-block
-		vertical-align: middle
-	img
-		display: inline-block
-		vertical-align: middle
-		max-width: 400px
-		margin-left: 3rem
-
-		@media (max-width: $smartphone)
+		.screen
+			position: absolute
+			z-index: 0
+		.wrap
+			position: relative
+			z-index: 1
 			max-width: 100%
-			margin: 2rem auto 0
-	video + .textWrap
-		color: #FFF
-	video
-		position: absolute
-		width: 100vw
-		height: 100vh
-		top: 50%
-		transform: translateY(-50%)
-		-webkit-transform: translateY(-50%)
-		left: 0
-		z-index: 0
-		object-fit: cover
-	&.backgrounder
-		h2, p
-			color: #FFF
-			text-shadow: 0px 0px 10px #000
+		&.desktop
+			max-width: 90%
+			& + .mobile
+				margin-left: -9%
+				z-index: 2 
+			.wrap
+				width: 700px
+			.screen
+				width: 76%
+				top: 7%
+				left: 12%
+		&.mobile
+			max-width: 60%
+			.wrap
+				width: 180px
+			.screen
+				width: 92.2%
+				left: 4%
+				top: 11%
+		&.tablet
+			max-width: 60%
+			.wrap
+				width: 100%
+			.screen
+				width: 86%
+				left: 7%
+				top: 5%
 footer
 	position: relative
 	display: table

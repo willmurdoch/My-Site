@@ -1,5 +1,10 @@
 ---
 title: 'IKEA Interactive Seasonal Catalog'
+url: 'http://slv.brownsteingroup.com/#/Preparing/Backtocollege/Navigation'
+desktop: true
+tablet: false
+mobile: false
+desktopImage: slv.jpg
 summary:
     enabled: '1'
     format: short

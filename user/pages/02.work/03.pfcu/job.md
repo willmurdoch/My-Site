@@ -1,5 +1,11 @@
 ---
 title: PFCU
+url: 'https://www.pfcu.com/'
+desktop: true
+tablet: false
+mobile: true
+mobileImage: pfcu_mobile.jpg
+desktopImage: pfcu_desktop.jpg
 summary:
     enabled: '1'
     format: short

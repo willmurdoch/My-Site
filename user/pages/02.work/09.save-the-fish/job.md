@@ -1,5 +1,11 @@
 ---
 title: 'Save the Fish'
+url: 'http://savethe.fish/'
+desktop: true
+tablet: false
+mobile: true
+mobileImage: verlasso_mobile.jpg
+desktopImage: verlasso_desktop.jpg
 summary:
     enabled: '1'
     format: short

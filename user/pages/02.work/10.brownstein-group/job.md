@@ -1,5 +1,11 @@
 ---
 title: 'Brownstein Group'
+url: 'http://www.brownsteingroup.com/'
+desktop: true
+tablet: false
+mobile: true
+mobileImage: bg_mobile.jpg
+desktopImage: bg_desktop.jpg
 summary:
     enabled: '1'
     format: short

@@ -1,5 +1,10 @@
 ---
 title: CoZara
+url: 'http://cozaraphilly.com/'
+desktop: true
+tablet: false
+mobile: false
+desktopImage: cozara_desktop.jpg
 summary:
     enabled: '1'
     format: short

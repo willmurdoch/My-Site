@@ -1,5 +1,11 @@
 ---
 title: 'Oh Mo He Didn''t'
+url: 'http://ohmohedidnt.com/'
+desktop: true
+tablet: false
+mobile: true
+mobileImage: movember_mobile.jpg
+desktopImage: movember_desktop.jpg
 summary:
     enabled: '1'
     format: short

@@ -76,10 +76,10 @@ class __TwigTemplate_f3c27e865af1cf142d28729330d425449199875f560f66fffa5c4b5de7f
             echo "\t\t\t";
             echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
             echo "
-\t\t\t<a class=\"cta\" href=\"";
+\t\t\t<a class=\"cta\" target=\"_blank\" href=\"";
             // line 25
-            echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
-            echo "\">Learn More</a>
+            echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "url", array());
+            echo "\">See More</a>
 \t\t</div>
 \t\t<div class=\"devices\">
 \t\t\t";
@@ -87,44 +87,56 @@ class __TwigTemplate_f3c27e865af1cf142d28729330d425449199875f560f66fffa5c4b5de7f
             if (($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "desktop", array()) == 1)) {
                 // line 29
                 echo "\t\t\t<div class=\"device desktop\">
-\t\t\t\t<img src=\"";
+\t\t\t\t<img class=\"screen\" src=\"";
                 // line 30
                 echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
                 echo "/";
                 echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "desktopImage", array());
                 echo "\" />
+\t\t\t\t<img class=\"wrap\" src=\"";
+                // line 31
+                echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
+                echo "/images/laptop.png\" />
 \t\t\t</div>
 \t\t\t";
             }
-            // line 33
+            // line 34
             echo "\t\t\t";
             if (($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "tablet", array()) == 1)) {
-                // line 34
-                echo "\t\t\t<div class=\"device tablet\">
-\t\t\t\t<img src=\"";
                 // line 35
+                echo "\t\t\t<div class=\"device tablet\">
+\t\t\t\t<img class=\"screen\" src=\"";
+                // line 36
                 echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
                 echo "/";
                 echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "tabletImage", array());
                 echo "\" />
+\t\t\t\t<img class=\"wrap\" src=\"";
+                // line 37
+                echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
+                echo "/images/tablet.png\" />
 \t\t\t</div>
 \t\t\t";
             }
-            // line 38
+            // line 40
             echo "\t\t\t";
             if (($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "mobile", array()) == 1)) {
-                // line 39
+                // line 41
                 echo "\t\t\t<div class=\"device mobile\">
-\t\t\t\t<img src=\"";
-                // line 40
+\t\t\t\t<img class=\"screen\" src=\"";
+                // line 42
                 echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
                 echo "/";
                 echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "mobileImage", array());
                 echo "\" />
+\t\t\t\t<img class=\"wrap\" src=\"";
+                // line 43
+                echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
+                echo "/images/smartphone.png\" />
 \t\t\t</div>
 \t\t\t";
             }
-            // line 43
+            // line 46
             echo "\t\t</div>
 \t</section>
 ";
@@ -143,7 +155,7 @@ class __TwigTemplate_f3c27e865af1cf142d28729330d425449199875f560f66fffa5c4b5de7f
 
     public function getDebugInfo()
     {
-        return array (  128 => 43,  120 => 40,  117 => 39,  114 => 38,  106 => 35,  103 => 34,  100 => 33,  92 => 30,  89 => 29,  87 => 28,  81 => 25,  76 => 24,  70 => 22,  64 => 20,  62 => 19,  58 => 17,  53 => 14,  47 => 12,  45 => 11,  39 => 9,  33 => 7,  27 => 5,  25 => 4,  21 => 2,  19 => 1,);
+        return array (  140 => 46,  134 => 43,  128 => 42,  125 => 41,  122 => 40,  116 => 37,  110 => 36,  107 => 35,  104 => 34,  98 => 31,  92 => 30,  89 => 29,  87 => 28,  81 => 25,  76 => 24,  70 => 22,  64 => 20,  62 => 19,  58 => 17,  53 => 14,  47 => 12,  45 => 11,  39 => 9,  33 => 7,  27 => 5,  25 => 4,  21 => 2,  19 => 1,);
     }
 }
 /* {% if page.active %}*/
@@ -170,22 +182,25 @@ class __TwigTemplate_f3c27e865af1cf142d28729330d425449199875f560f66fffa5c4b5de7f
 /* 				<h2>{{ page.title }}</h2>*/
 /* 			{% endif %}*/
 /* 			{{ page.content }}*/
-/* 			<a class="cta" href="{{ page.url }}">Learn More</a>*/
+/* 			<a class="cta" target="_blank" href="{{ page.header.url }}">See More</a>*/
 /* 		</div>*/
 /* 		<div class="devices">*/
 /* 			{% if page.header.desktop == 1 %}*/
 /* 			<div class="device desktop">*/
-/* 				<img src="{{ page.url }}/{{ page.header.desktopImage }}" />*/
+/* 				<img class="screen" src="{{ page.url }}/{{ page.header.desktopImage }}" />*/
+/* 				<img class="wrap" src="{{ theme_url }}/images/laptop.png" />*/
 /* 			</div>*/
 /* 			{% endif %}*/
 /* 			{% if page.header.tablet == 1 %}*/
 /* 			<div class="device tablet">*/
-/* 				<img src="{{ page.url }}/{{ page.header.tabletImage }}" />*/
+/* 				<img class="screen" src="{{ page.url }}/{{ page.header.tabletImage }}" />*/
+/* 				<img class="wrap" src="{{ theme_url }}/images/tablet.png" />*/
 /* 			</div>*/
 /* 			{% endif %}*/
 /* 			{% if page.header.mobile == 1 %}*/
 /* 			<div class="device mobile">*/
-/* 				<img src="{{ page.url }}/{{ page.header.mobileImage }}" />*/
+/* 				<img class="screen" src="{{ page.url }}/{{ page.header.mobileImage }}" />*/
+/* 				<img class="wrap" src="{{ theme_url }}/images/smartphone.png" />*/
 /* 			</div>*/
 /* 			{% endif %}*/
 /* 		</div>*/
