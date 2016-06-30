@@ -56,88 +56,90 @@ class __TwigTemplate_f3c27e865af1cf142d28729330d425449199875f560f66fffa5c4b5de7f
         } else {
             // line 17
             echo "\t<section class=\"job\">
-\t\t<div class=\"textWrap\">
-\t\t\t";
-            // line 19
+\t\t<div class=\"jobContent\">
+\t\t\t<div class=\"textWrap bw33\">
+\t\t\t\t";
+            // line 20
             if ($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "displayTitle", array())) {
-                // line 20
-                echo "\t\t\t\t<h2>";
+                // line 21
+                echo "\t\t\t\t\t<h2>";
                 echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "displayTitle", array());
                 echo "</h2>
-\t\t\t";
+\t\t\t\t";
             } else {
-                // line 22
-                echo "\t\t\t\t<h2>";
+                // line 23
+                echo "\t\t\t\t\t<h2>";
                 echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "title", array());
                 echo "</h2>
-\t\t\t";
+\t\t\t\t";
             }
-            // line 24
-            echo "\t\t\t";
+            // line 25
+            echo "\t\t\t\t";
             echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
             echo "
-\t\t\t<a class=\"cta\" target=\"_blank\" href=\"";
-            // line 25
+\t\t\t\t<a class=\"cta\" target=\"_blank\" href=\"";
+            // line 26
             echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "url", array());
-            echo "\">See More</a>
-\t\t</div>
-\t\t<div class=\"devices\">
-\t\t\t";
-            // line 28
+            echo "\">See the Site</a>
+\t\t\t</div>
+\t\t\t<div class=\"devices bw66\">
+\t\t\t\t";
+            // line 29
             if (($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "desktop", array()) == 1)) {
-                // line 29
-                echo "\t\t\t<div class=\"device desktop\">
-\t\t\t\t<img class=\"screen\" src=\"";
                 // line 30
+                echo "\t\t\t\t<div class=\"device desktop\">
+\t\t\t\t\t<img class=\"screen\" src=\"";
+                // line 31
                 echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
                 echo "/";
                 echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "desktopImage", array());
                 echo "\" />
-\t\t\t\t<img class=\"wrap\" src=\"";
-                // line 31
+\t\t\t\t\t<img class=\"wrap\" src=\"";
+                // line 32
                 echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
                 echo "/images/laptop.png\" />
-\t\t\t</div>
-\t\t\t";
+\t\t\t\t</div>
+\t\t\t\t";
             }
-            // line 34
-            echo "\t\t\t";
+            // line 35
+            echo "\t\t\t\t";
             if (($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "tablet", array()) == 1)) {
-                // line 35
-                echo "\t\t\t<div class=\"device tablet\">
-\t\t\t\t<img class=\"screen\" src=\"";
                 // line 36
+                echo "\t\t\t\t<div class=\"device tablet\">
+\t\t\t\t\t<img class=\"screen\" src=\"";
+                // line 37
                 echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
                 echo "/";
                 echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "tabletImage", array());
                 echo "\" />
-\t\t\t\t<img class=\"wrap\" src=\"";
-                // line 37
+\t\t\t\t\t<img class=\"wrap\" src=\"";
+                // line 38
                 echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
                 echo "/images/tablet.png\" />
-\t\t\t</div>
-\t\t\t";
+\t\t\t\t</div>
+\t\t\t\t";
             }
-            // line 40
-            echo "\t\t\t";
+            // line 41
+            echo "\t\t\t\t";
             if (($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "mobile", array()) == 1)) {
-                // line 41
-                echo "\t\t\t<div class=\"device mobile\">
-\t\t\t\t<img class=\"screen\" src=\"";
                 // line 42
+                echo "\t\t\t\t<div class=\"device mobile\">
+\t\t\t\t\t<img class=\"screen\" src=\"";
+                // line 43
                 echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
                 echo "/";
                 echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "mobileImage", array());
                 echo "\" />
-\t\t\t\t<img class=\"wrap\" src=\"";
-                // line 43
+\t\t\t\t\t<img class=\"wrap\" src=\"";
+                // line 44
                 echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
                 echo "/images/smartphone.png\" />
-\t\t\t</div>
-\t\t\t";
+\t\t\t\t</div>
+\t\t\t\t";
             }
-            // line 46
-            echo "\t\t</div>
+            // line 47
+            echo "\t\t\t</div>
+\t\t</div>
 \t</section>
 ";
         }
@@ -155,7 +157,7 @@ class __TwigTemplate_f3c27e865af1cf142d28729330d425449199875f560f66fffa5c4b5de7f
 
     public function getDebugInfo()
     {
-        return array (  140 => 46,  134 => 43,  128 => 42,  125 => 41,  122 => 40,  116 => 37,  110 => 36,  107 => 35,  104 => 34,  98 => 31,  92 => 30,  89 => 29,  87 => 28,  81 => 25,  76 => 24,  70 => 22,  64 => 20,  62 => 19,  58 => 17,  53 => 14,  47 => 12,  45 => 11,  39 => 9,  33 => 7,  27 => 5,  25 => 4,  21 => 2,  19 => 1,);
+        return array (  141 => 47,  135 => 44,  129 => 43,  126 => 42,  123 => 41,  117 => 38,  111 => 37,  108 => 36,  105 => 35,  99 => 32,  93 => 31,  90 => 30,  88 => 29,  82 => 26,  77 => 25,  71 => 23,  65 => 21,  63 => 20,  58 => 17,  53 => 14,  47 => 12,  45 => 11,  39 => 9,  33 => 7,  27 => 5,  25 => 4,  21 => 2,  19 => 1,);
     }
 }
 /* {% if page.active %}*/
@@ -175,34 +177,36 @@ class __TwigTemplate_f3c27e865af1cf142d28729330d425449199875f560f66fffa5c4b5de7f
 /* */
 /* {% else %}*/
 /* 	<section class="job">*/
-/* 		<div class="textWrap">*/
-/* 			{% if page.header.displayTitle %}*/
-/* 				<h2>{{ page.header.displayTitle }}</h2>*/
-/* 			{% else %}*/
-/* 				<h2>{{ page.title }}</h2>*/
-/* 			{% endif %}*/
-/* 			{{ page.content }}*/
-/* 			<a class="cta" target="_blank" href="{{ page.header.url }}">See More</a>*/
-/* 		</div>*/
-/* 		<div class="devices">*/
-/* 			{% if page.header.desktop == 1 %}*/
-/* 			<div class="device desktop">*/
-/* 				<img class="screen" src="{{ page.url }}/{{ page.header.desktopImage }}" />*/
-/* 				<img class="wrap" src="{{ theme_url }}/images/laptop.png" />*/
+/* 		<div class="jobContent">*/
+/* 			<div class="textWrap bw33">*/
+/* 				{% if page.header.displayTitle %}*/
+/* 					<h2>{{ page.header.displayTitle }}</h2>*/
+/* 				{% else %}*/
+/* 					<h2>{{ page.title }}</h2>*/
+/* 				{% endif %}*/
+/* 				{{ page.content }}*/
+/* 				<a class="cta" target="_blank" href="{{ page.header.url }}">See the Site</a>*/
 /* 			</div>*/
-/* 			{% endif %}*/
-/* 			{% if page.header.tablet == 1 %}*/
-/* 			<div class="device tablet">*/
-/* 				<img class="screen" src="{{ page.url }}/{{ page.header.tabletImage }}" />*/
-/* 				<img class="wrap" src="{{ theme_url }}/images/tablet.png" />*/
+/* 			<div class="devices bw66">*/
+/* 				{% if page.header.desktop == 1 %}*/
+/* 				<div class="device desktop">*/
+/* 					<img class="screen" src="{{ page.url }}/{{ page.header.desktopImage }}" />*/
+/* 					<img class="wrap" src="{{ theme_url }}/images/laptop.png" />*/
+/* 				</div>*/
+/* 				{% endif %}*/
+/* 				{% if page.header.tablet == 1 %}*/
+/* 				<div class="device tablet">*/
+/* 					<img class="screen" src="{{ page.url }}/{{ page.header.tabletImage }}" />*/
+/* 					<img class="wrap" src="{{ theme_url }}/images/tablet.png" />*/
+/* 				</div>*/
+/* 				{% endif %}*/
+/* 				{% if page.header.mobile == 1 %}*/
+/* 				<div class="device mobile">*/
+/* 					<img class="screen" src="{{ page.url }}/{{ page.header.mobileImage }}" />*/
+/* 					<img class="wrap" src="{{ theme_url }}/images/smartphone.png" />*/
+/* 				</div>*/
+/* 				{% endif %}*/
 /* 			</div>*/
-/* 			{% endif %}*/
-/* 			{% if page.header.mobile == 1 %}*/
-/* 			<div class="device mobile">*/
-/* 				<img class="screen" src="{{ page.url }}/{{ page.header.mobileImage }}" />*/
-/* 				<img class="wrap" src="{{ theme_url }}/images/smartphone.png" />*/
-/* 			</div>*/
-/* 			{% endif %}*/
 /* 		</div>*/
 /* 	</section>*/
 /* {% endif %}*/

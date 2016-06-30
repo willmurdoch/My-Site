@@ -67,11 +67,12 @@ class __TwigTemplate_77f62fc32f474a14251de455662c39fe3e47e392205d22a9a5937fdab42
   \t\t<div id=\"stars3\"></div>
   \t\t<div id=\"stars4\"></div>
   \t</div>
+    <div class=\"fixedWrap\"></div>
   </body>
   ";
-        // line 73
-        $this->displayBlock('bottom', $context, $blocks);
         // line 74
+        $this->displayBlock('bottom', $context, $blocks);
+        // line 75
         echo "</html>
 ";
     }
@@ -195,7 +196,7 @@ class __TwigTemplate_77f62fc32f474a14251de455662c39fe3e47e392205d22a9a5937fdab42
       ";
     }
 
-    // line 73
+    // line 74
     public function block_bottom($context, array $blocks = array())
     {
     }
@@ -212,7 +213,7 @@ class __TwigTemplate_77f62fc32f474a14251de455662c39fe3e47e392205d22a9a5937fdab42
 
     public function getDebugInfo()
     {
-        return array (  199 => 73,  194 => 59,  191 => 58,  185 => 38,  182 => 37,  179 => 36,  176 => 35,  173 => 34,  171 => 33,  168 => 32,  165 => 31,  162 => 30,  159 => 29,  156 => 28,  150 => 25,  147 => 24,  144 => 23,  141 => 21,  138 => 20,  133 => 40,  131 => 28,  128 => 27,  126 => 20,  117 => 18,  111 => 16,  105 => 14,  102 => 13,  96 => 11,  90 => 9,  88 => 8,  83 => 5,  80 => 4,  75 => 74,  73 => 73,  60 => 63,  56 => 61,  54 => 58,  50 => 56,  47 => 55,  45 => 54,  31 => 42,  29 => 4,  24 => 1,);
+        return array (  200 => 74,  195 => 59,  192 => 58,  186 => 38,  183 => 37,  180 => 36,  177 => 35,  174 => 34,  172 => 33,  169 => 32,  166 => 31,  163 => 30,  160 => 29,  157 => 28,  151 => 25,  148 => 24,  145 => 23,  142 => 21,  139 => 20,  134 => 40,  132 => 28,  129 => 27,  127 => 20,  118 => 18,  112 => 16,  106 => 14,  103 => 13,  97 => 11,  91 => 9,  89 => 8,  84 => 5,  81 => 4,  76 => 75,  74 => 74,  60 => 63,  56 => 61,  54 => 58,  50 => 56,  47 => 55,  45 => 54,  31 => 42,  29 => 4,  24 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -286,6 +287,7 @@ class __TwigTemplate_77f62fc32f474a14251de455662c39fe3e47e392205d22a9a5937fdab42
 /*   		<div id="stars3"></div>*/
 /*   		<div id="stars4"></div>*/
 /*   	</div>*/
+/*     <div class="fixedWrap"></div>*/
 /*   </body>*/
 /*   {% block bottom %}{% endblock %}*/
 /* </html>*/

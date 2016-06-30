@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'E:/wamp/www/My-Site/user/config/system.yaml',
-    'modified' => 1467302631,
+    'modified' => 1467316706,
     'data' => [
         'absolute_urls' => false,
         'timezone' => 'America/New_York',
@@ -18,7 +18,7 @@ return [
             'override_locale' => false
         ],
         'home' => [
-            'alias' => '/home',
+            'alias' => '/work',
             'hide_in_urls' => true
         ],
         'pages' => [

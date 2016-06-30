@@ -15,34 +15,36 @@
 
 {% else %}
 	<section class="job">
-		<div class="textWrap">
-			{% if page.header.displayTitle %}
-				<h2>{{ page.header.displayTitle }}</h2>
-			{% else %}
-				<h2>{{ page.title }}</h2>
-			{% endif %}
-			{{ page.content }}
-			<a class="cta" target="_blank" href="{{ page.header.url }}">See More</a>
-		</div>
-		<div class="devices">
-			{% if page.header.desktop == 1 %}
-			<div class="device desktop">
-				<img class="screen" src="{{ page.url }}/{{ page.header.desktopImage }}" />
-				<img class="wrap" src="{{ theme_url }}/images/laptop.png" />
+		<div class="jobContent">
+			<div class="textWrap bw33">
+				{% if page.header.displayTitle %}
+					<h2>{{ page.header.displayTitle }}</h2>
+				{% else %}
+					<h2>{{ page.title }}</h2>
+				{% endif %}
+				{{ page.content }}
+				<a class="cta" target="_blank" href="{{ page.header.url }}">See the Site</a>
 			</div>
-			{% endif %}
-			{% if page.header.tablet == 1 %}
-			<div class="device tablet">
-				<img class="screen" src="{{ page.url }}/{{ page.header.tabletImage }}" />
-				<img class="wrap" src="{{ theme_url }}/images/tablet.png" />
+			<div class="devices bw66">
+				{% if page.header.desktop == 1 %}
+				<div class="device desktop">
+					<img class="screen" src="{{ page.url }}/{{ page.header.desktopImage }}" />
+					<img class="wrap" src="{{ theme_url }}/images/laptop.png" />
+				</div>
+				{% endif %}
+				{% if page.header.tablet == 1 %}
+				<div class="device tablet">
+					<img class="screen" src="{{ page.url }}/{{ page.header.tabletImage }}" />
+					<img class="wrap" src="{{ theme_url }}/images/tablet.png" />
+				</div>
+				{% endif %}
+				{% if page.header.mobile == 1 %}
+				<div class="device mobile">
+					<img class="screen" src="{{ page.url }}/{{ page.header.mobileImage }}" />
+					<img class="wrap" src="{{ theme_url }}/images/smartphone.png" />
+				</div>
+				{% endif %}
 			</div>
-			{% endif %}
-			{% if page.header.mobile == 1 %}
-			<div class="device mobile">
-				<img class="screen" src="{{ page.url }}/{{ page.header.mobileImage }}" />
-				<img class="wrap" src="{{ theme_url }}/images/smartphone.png" />
-			</div>
-			{% endif %}
 		</div>
 	</section>
 {% endif %}
