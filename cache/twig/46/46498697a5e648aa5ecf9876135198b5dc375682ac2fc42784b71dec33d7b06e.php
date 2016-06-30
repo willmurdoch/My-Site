@@ -40,7 +40,7 @@ class __TwigTemplate_4a8e2e70fca303b07ce552fde84d2b7eb3cfe22e97a5793624a3e7ae5e5
         </svg>
       </a>
       <div class=\"social\">
-        <a class=\"linkedin\" href=\"http://www.linkedin.com\" target=\"_blank\">
+        <a class=\"linkedin\" href=\"https://www.linkedin.com/in/will-murdoch-59823725\" target=\"_blank\">
           <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"
           \t width=\"430.117px\" height=\"430.117px\" viewBox=\"0 0 430.117 430.117\" style=\"enable-background:new 0 0 430.117 430.117;\"
           \t xml:space=\"preserve\">
@@ -104,7 +104,7 @@ class __TwigTemplate_4a8e2e70fca303b07ce552fde84d2b7eb3cfe22e97a5793624a3e7ae5e5
 /*         </svg>*/
 /*       </a>*/
 /*       <div class="social">*/
-/*         <a class="linkedin" href="http://www.linkedin.com" target="_blank">*/
+/*         <a class="linkedin" href="https://www.linkedin.com/in/will-murdoch-59823725" target="_blank">*/
 /*           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"*/
 /*           	 width="430.117px" height="430.117px" viewBox="0 0 430.117 430.117" style="enable-background:new 0 0 430.117 430.117;"*/
 /*           	 xml:space="preserve">*/

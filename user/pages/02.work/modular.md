@@ -1,5 +1,5 @@
 ---
-title: Work
+title: Portfolio
 displayTitle: 'Will Murdoch'
 body_classes: modular
 subhead: 'Developer <span class="divider">|</span> <span>Designer</span> <span class="divider">|</span> Animator'
@@ -13,3 +13,4 @@ content:
         by: folder
 ---
 
+My Work

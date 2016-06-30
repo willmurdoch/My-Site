@@ -104,25 +104,40 @@ body {
 	transition: all 0.2s ease-out;
 }
 
+@media (max-width: 1023px) {
+	#logo {
+		width: 75px;
+	}
+	#logo:before {
+		width: 75px;
+		height: 75px;
+	}
+}
+
 #logo svg {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	transform: scale(1);
+	-webkit-transform: scale(1);
 	transition: all 0.2s ease-out;
 }
 
 #logo svg #letter1, #logo svg #letter2 {
 	transform-origin: center;
+	-webkit-transfom-origin: center;
 	transform: scale(0);
+	-webkit-transform: scale(0);
 	animation: logoPop 0.4s ease-out forwards;
 }
 
 #logo:hover:before {
 	transform: scale(1);
+	-webkit-transform: scale(1);
 }
 
 #logo:hover svg {
 	transform: scale(0.75) translateY(5px);
+	-webkit-transform: scale(0.75) translateY(5px);
 }
 
 nav {
@@ -288,17 +303,20 @@ header .textWrap h2 span.divider {
 	border: 0;
 	outline: 0;
 	text-decoration: none;
-	padding: 1rem 2rem;
-	background: #000;
-	color: #2ea0dd;
+	padding: 0.5rem 2rem;
+	background: transparent;
+	border: 2px solid #14338c;
+	margin-top: 2rem;
+	color: #14338c;
+	font-weight: 500;
 	display: inline-block;
 	text-transform: uppercase;
 	transition: background 0.3s ease-out, color 0.3s ease-out;
 }
 
 .cta:hover {
-	background: #2ea0dd;
-	color: #000;
+	background: #14338c;
+	color: #FFF;
 }
 
 /*----------Grid------------*/
@@ -361,16 +379,6 @@ header .textWrap h2 span.divider {
 	float: right;
 }
 
-.fixedWrap {
-	position: fixed;
-	top: 50vh;
-	height: 50vh;
-	width: 100%;
-	left: 0;
-	background: #EEE;
-	z-index: 0;
-}
-
 .wrapper {
 	display: block;
 	margin: 0 auto;
@@ -378,6 +386,7 @@ header .textWrap h2 span.divider {
 	z-index: 1;
 	width: 100%;
 	float: left;
+	background: #eee;
 }
 
 .scaler {
@@ -389,7 +398,7 @@ header .textWrap h2 span.divider {
 
 section {
 	position: relative;
-	width: 100%;
+	width: 95%;
 	max-width: 1200px;
 	z-index: 1;
 	padding: 3rem 0;
@@ -446,7 +455,7 @@ section .jobContent .bw66 {
 @media (max-width: 720px) {
 	section .jobContent {
 		padding: 0 1.5rem;
-		width: calc(100% + 10px*2 - 3rem);
+		width: calc(100% - 3rem);
 	}
 }
 
@@ -463,12 +472,52 @@ section .jobContent .textWrap, section .jobContent .devices {
 }
 
 section.job {
-	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+	border-top: 1px solid #e1e1e1;
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+section.job h2 {
+	font-weight: 300;
+	font-size: 2rem;
+	border-bottom: 1px solid #e1e1e1;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+section.job:first-of-type {
+	padding-top: 0;
+}
+
+section.job:first-of-type:before {
+	content: 'My Work';
+	font-size: 3rem;
+	color: #333;
+	text-align: center;
+	font-weight: 200;
+	margin: 0 0 2rem;
+	padding: 2rem 0 2rem;
+	text-transform: uppercase;
+	border-bottom: 1px solid #e1e1e1;
+	display: block;
+}
+
+section.job:nth-of-type(even) {
+	direction: rtl;
+}
+
+section.job:nth-of-type(even) .textWrap h2, section.job:nth-of-type(even) .textWrap p, section.job:nth-of-type(even) .textWrap a {
+	margin-left: 2rem;
+}
+
+@media (max-width: 720px) {
+	section.job:nth-of-type(even) .textWrap h2, section.job:nth-of-type(even) .textWrap p, section.job:nth-of-type(even) .textWrap a {
+		margin-left: 0;
+	}
 }
 
 section:first-child {
 	margin-top: -2rem;
-	border-top: 3px solid #a7b9ef;
 }
 
 section.top {
@@ -595,15 +644,13 @@ footer {
 	position: relative;
 	display: table;
 	width: 100%;
-	background: #08122f;
 	z-index: 1;
-	border-top: 1px solid #a7b9ef;
 	padding-top: 0.5rem;
 	margin: 0 auto;
 }
 
 footer p {
-	color: #FFF;
+	color: #333;
 	font-weight: 500;
 	font-size: 0.8rem;
 	margin: 0;
@@ -611,7 +658,7 @@ footer p {
 }
 
 footer a {
-	color: #a7b9ef;
+	color: #333;
 }
 
 @keyframes animStar {

@@ -97,20 +97,30 @@ $navSplit: 1
 		transform: scale(0.5)
 		-webkit-transform: scale(0.9)
 		transition: all 0.2s ease-out
+	@media (max-width: $tablet)
+		width: 75px
+		&:before
+			width: 75px
+			height: 75px
 	svg
 		width: 100%
-		height: auto
+		height: 100%
 		transform: scale(1)
+		-webkit-transform: scale(1)
 		transition: all 0.2s ease-out
 		#letter1, #letter2
 			transform-origin: center
+			-webkit-transfom-origin: center
 			transform: scale(0)
+			-webkit-transform: scale(0)
 			animation: logoPop 0.4s ease-out forwards
 	&:hover
 		&:before
 			transform: scale(1)
+			-webkit-transform: scale(1)
 		svg
 			transform: scale(0.75) translateY(5px)
+			-webkit-transform: scale(0.75) translateY(5px)
 
 nav
 	position: fixed
@@ -237,16 +247,19 @@ header
 	border: 0
 	outline: 0
 	text-decoration: none
-	padding: 1rem 2rem
-	background: $brandColor2
-	color: $brandColor1
+	padding: 0.5rem 2rem
+	background: transparent
+	border: 2px solid #14338c
+	margin-top: 2rem
+	color: #14338c
+	font-weight: 500
 	display: inline-block
 	text-transform: uppercase
 	transition: background 0.3s ease-out, color 0.3s ease-out
 
 	&:hover
-		background: $brandColor1
-		color: $brandColor2
+		background: #14338c
+		color: #FFF
 
 /*----------Grid------------*/
 @import 'bootwill.sass'
@@ -264,14 +277,7 @@ header
 			margin: 0
 			float: right
 
-.fixedWrap
-	position: fixed
-	top: 50vh
-	height: 50vh
-	width: 100%
-	left: 0
-	background: #EEE
-	z-index: 0
+
 .wrapper
 	display: block
 	margin: 0 auto
@@ -279,6 +285,7 @@ header
 	z-index: 1
 	width: 100%
 	float: left
+	background: #eee
 .scaler
 	max-width: 1550px
 	width: 95%
@@ -286,7 +293,7 @@ header
 	display: table
 section
 	position: relative
-	width: 100%
+	width: 95%
 	max-width: 1200px
 	z-index: 1
 	padding: 3rem 0
@@ -301,7 +308,7 @@ section
 		width: calc(100% + 10px*2 - 8rem)
 		@media (max-width: $smartphone)
 			padding: 0 1.5rem
-			width: calc(100% + 10px*2 - 3rem)
+			width: calc(100% - 3rem)
 		.textWrap, .devices
 			display: inline-block
 			vertical-align: middle
@@ -309,10 +316,38 @@ section
 			@media (max-width: $smartphone)
 				text-align: center
 	&.job
-		box-shadow: 0px 0px 50px rgba(0,0,0,0.15)
+		border-top: 1px solid #e1e1e1
+		box-shadow: 0px 0px 50px rgba(0,0,0,0.1)
+		border-radius: 5px
+		h2
+			font-weight: 300
+			font-size: 2rem
+			border-bottom: 1px solid #e1e1e1
+			padding-bottom: 1rem
+			margin-bottom: 1rem
+		&:first-of-type
+			padding-top: 0
+			&:before
+				content: 'My Work'
+				font-size: 3rem
+				color: #333
+				text-align: center
+				font-weight: 200
+				margin: 0 0 2rem
+				padding: 2rem 0 2rem
+				text-transform: uppercase
+				border-bottom: 1px solid #e1e1e1
+				display: block
+		&:nth-of-type(even)
+			direction: rtl
+			.textWrap
+				h2, p, a
+					margin-left: 2rem
+					@media (max-width:$smartphone)
+						margin-left: 0
 	&:first-child
 		margin-top: -2rem
-		border-top: 3px solid #a7b9ef
+
 	&.top
 		max-width: 900px
 		width: 90%
@@ -389,19 +424,17 @@ footer
 	position: relative
 	display: table
 	width: 100%
-	background: #08122f
 	z-index: 1
-	border-top: 1px solid #a7b9ef
 	padding-top: 0.5rem
 	margin: 0 auto
 	p
-		color: #FFF
+		color: #333
 		font-weight: 500
 		font-size: 0.8rem
 		margin: 0
 		padding-bottom: 0.5rem
 	a
-		color: #a7b9ef
+		color: #333
 
 @keyframes animStar
 	from

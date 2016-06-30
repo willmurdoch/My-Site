@@ -16,7 +16,7 @@ class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8e
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->loadTemplate("modular.html.twig", "modular.html.twig", 1, "1987963837")->display($context);
+        $this->loadTemplate("modular.html.twig", "modular.html.twig", 1, "268127247")->display($context);
     }
 
     public function getTemplateName()
@@ -32,7 +32,7 @@ class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8e
 
 
 /* modular.html.twig */
-class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8ea36fd_1987963837 extends Twig_Template
+class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8ea36fd_268127247 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -61,14 +61,7 @@ class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8e
     public function block_content($context, array $blocks = array())
     {
         // line 6
-        echo "\t\t<!--<section class=\"top\">
-\t\t\t";
-        // line 7
-        echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
-        echo "
-\t\t</section>-->
-\t\t";
-        // line 9
+        echo "\t\t";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["collection"]) ? $context["collection"] : null));
         $context['loop'] = array(
@@ -85,10 +78,10 @@ class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8e
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
-            // line 10
+            // line 7
             echo "\t\t\t\t";
-            $this->loadTemplate("partials/modules.html.twig", "modular.html.twig", 10)->display(array_merge($context, array("modular" => (isset($context["page"]) ? $context["page"] : null), "page" => $context["child"], "truncate" => false)));
-            // line 11
+            $this->loadTemplate("partials/modules.html.twig", "modular.html.twig", 7)->display(array_merge($context, array("modular" => (isset($context["page"]) ? $context["page"] : null), "page" => $context["child"], "truncate" => false)));
+            // line 8
             echo "\t\t";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
@@ -102,7 +95,7 @@ class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 12
+        // line 9
         echo "\t";
     }
 
@@ -118,7 +111,7 @@ class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8e
 
     public function getDebugInfo()
     {
-        return array (  106 => 12,  92 => 11,  89 => 10,  72 => 9,  67 => 7,  64 => 6,  61 => 5,  57 => 1,  55 => 3,  19 => 1,);
+        return array (  99 => 9,  85 => 8,  82 => 7,  64 => 6,  61 => 5,  57 => 1,  55 => 3,  19 => 1,);
     }
 }
 /* {% embed 'partials/base.html.twig' %}*/
@@ -126,9 +119,6 @@ class __TwigTemplate_e6533fd17e5ab2f20a9ad0f08d9969c65d47469ab9c7c9f65b916064c8e
 /* 	{% set collection = page.collection() %}*/
 /* */
 /* 	{% block content %}*/
-/* 		<!--<section class="top">*/
-/* 			{{ page.content }}*/
-/* 		</section>-->*/
 /* 		{% for child in collection %}*/
 /* 				{% include 'partials/modules.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}*/
 /* 		{% endfor %}*/
