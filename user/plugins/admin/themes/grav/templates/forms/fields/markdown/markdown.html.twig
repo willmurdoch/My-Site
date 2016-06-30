@@ -1,0 +1,58 @@
+{% set value = (value is null ? field.default : value) %}
+<style>
+  .trumbowyg-editor p{
+    padding: 0;
+  }
+</style>
+{% block label %}
+    {% if field.label %}
+        {% set hint = field.help ? 'data-hint="' ~ field.help ~ '"': '' %}
+        <div class="form-label form-field hint--bottom" {{ hint }}>{{ field.label|t }}</div>
+    {% endif %}
+{% endblock %}
+{% block field %}
+    <div class="form-field">
+        <div class="form-data form-markdown-wrapper cm-s-paper">
+
+			<link rel="stylesheet" href="{{ base_url_absolute }}/user/plugins/admin/themes/grav/js/editor/ui/trumbowyg.css">
+      <textarea name="{{ (scope ~ field.name)|fieldName }}" data-grav-urlpreview="{{ base_url }}/media/{{ admin.route|trim('/') }}.json" id="editor">{{ value|join("\n") }}</textarea>
+
+			<script src="{{ base_url_absolute }}/user/plugins/admin/themes/grav/js/editor/trumbowyg.min.js"></script>
+			<script src="{{ base_url_absolute }}/user/plugins/admin/themes/grav/js/editor/langs/pl.min.js"></script>
+
+			<script src="{{ base_url_absolute }}/user/plugins/admin/themes/grav/js/editor/plugins/base64/trumbowyg.base64.min.js"></script>
+			<script src="{{ base_url_absolute }}/user/plugins/admin/themes/grav/js/editor/plugins/noembed/trumbowyg.noembed.min.js"></script>
+			<script src="{{ base_url_absolute }}/user/plugins/admin/themes/grav/js/editor/plugins/pasteimage/trumbowyg.pasteimage.min.js"></script>
+			<script src="{{ base_url_absolute }}/user/plugins/admin/themes/grav/js/editor/plugins/preformatted/trumbowyg.preformatted.min.js"></script>
+
+			<script>
+			$("#editor").trumbowyg({
+				lang: 'en',
+				semantic: true,
+				removeformatPasted: true,
+				resetCss: true,
+                btnsDef: {
+                    // Customizables dropdowns
+                    image: {
+                        dropdown: ['insertImage', 'base64', 'noEmbed'],
+                        ico: 'insertImage'
+                    }
+                },
+                btns: [
+                    ['viewHTML'],
+                    ['undo', 'redo'],
+                    ['formatting'],
+                    'btnGrp-design',
+                    ['link'],
+                    ['image'],
+                    'btnGrp-justify',
+                    'btnGrp-lists',
+                    ['preformatted'],
+                    ['horizontalRule'],
+                    ['fullscreen']
+                ]
+			});
+			</script>
+        </div>
+    </div>
+{% endblock %}

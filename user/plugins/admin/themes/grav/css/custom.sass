@@ -1,0 +1,128 @@
+$mainColor: #2ea0dd
+$dMainColor: #0c7ab5
+$drMainColor: #0b5881
+$backgroundColor: #131313
+$lBackgroundColor: #000
+
+#admin-login h1
+  background: $drMainColor
+  display: none
+
+#admin-login
+  background: $dMainColor
+a
+  color: $dMainColor
+
+  &:hover
+    color: $mainColor
+
+.pages-list .page-icon
+  color: $dMainColor
+.button-group .dropdown-menu
+  background: $dMainColor
+.button-group .dropdown-menu li>a:focus, .button-group .dropdown-menu li>a:hover
+  background: $mainColor
+body
+  background: $backgroundColor
+
+.content-padding
+  background: $backgroundColor url(../images/background.jpg) center no-repeat
+  background-size: cover
+
+.button.dropdown-toggle
+  border: 1px solid $drMainColor
+
+.secondary-accent .button
+  background: $dMainColor
+  border: 1px solid $drMainColor
+  outline: 0
+
+#admin-user-details:hover img, .admin-user-details:hover img
+  box-shadow: 0px 0px 0 50px $backgroundColor
+
+#admin-logo
+  background: $dMainColor
+
+#admin-sidebar
+  background: $lBackgroundColor
+  a
+    color: #FFF
+.button
+  background: $mainColor
+.button:hover
+  background: $dMainColor
+
+a.button, button
+  transition: background 0.3s ease-out
+.tertiary-accent .button
+  background: $mainColor
+
+.tertiary-accent .button:hover
+  background: $drMainColor
+
+.switch-grav.switch-toggle input.highlight:checked ~ a
+  background: $dMainColor
+
+.tab-bar,.form-tabs
+  background: $mainColor
+
+  label
+    color: #000
+.form-tabs>label:hover
+  background: $dMainColor
+  color: #FFF
+
+.tab-bar span, .tab-bar a
+  color: #000
+.notice,.info
+  background: $dMainColor
+
+#admin-topbar .switch-toggle input.highlight:checked ~ a
+  background: $dMainColor
+#admin-topbar .switch-grav
+  background-color: $drMainColor
+
+#admin-user-details .admin-user-names, .admin-user-details .admin-user-names
+  margin-left: 0
+
+#admin-user-details .admin-user-names h5, .admin-user-details .admin-user-names h5
+  color: $dMainColor
+
+#admin-menu li.selected a
+  background: $mainColor
+  border-left: 9px solid $dMainColor
+
+#admin-menu li .badges .count
+  background: $dMainColor
+  color: #FFF
+
+#admin-menu li:not(.selected) a:hover
+  background: $backgroundColor
+
+.secondary-accent
+  background: $mainColor
+
+#admin-dashboard .tertiary-accent
+  background-color: $mainColor
+  background-image: none
+
+#admin-dashboard .secondary-accent
+  background: $dMainColor
+
+.tertiary-accent .button-bar
+  background: $dMainColor
+
+.secondary-accent .button-bar
+  background: $mainColor
+
+#admin-menu li a i
+  color: $mainColor
+
+#footer
+  display: none
+
+.form-order-wrapper
+  .note
+    display: none
+form .dynfields .form-row, form [data-grav-field="array"] .form-row
+  display: block

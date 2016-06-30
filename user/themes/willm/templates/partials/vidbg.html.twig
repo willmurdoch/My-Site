@@ -1,0 +1,30 @@
+{% if page.active %}
+	<section class="vidbg">
+		<div class="textWrap">
+			{% if page.header.displayTitle %}
+				<h2>{{ page.header.displayTitle }}</h2>
+			{% else %}
+				<h2>{{ page.title }}</h2>
+			{% endif %}
+			{{ page.content }}
+		</div>
+	</section>
+
+{% else %}
+	<section class="vidbg">
+		<div class="textWrap">
+			{% if page.header.displayTitle %}
+				<h2>{{ page.header.displayTitle }}</h2>
+			{% else %}
+				<h2>{{ page.title }}</h2>
+			{% endif %}
+			{{ page.content }}
+			<a class="cta" href="{{ page.url }}">Learn More</a>
+		</div>
+		{% if page.media.videos %}
+			<video preload autoplay loop>
+				<source src="{{ page.media.videos|first.url }}" type="video/mp4">
+			</video>
+		{% endif %}
+	</section>
+{% endif %}

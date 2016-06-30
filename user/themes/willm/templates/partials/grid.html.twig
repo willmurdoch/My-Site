@@ -1,0 +1,32 @@
+{% if page.active %}
+
+{% else %}
+
+{% endif %}
+
+<section>
+	<div class="textWrap">
+		{% if page.header.displayTitle %}
+			<h2>{{ page.header.displayTitle }}</h2>
+		{% else %}
+			<h2>{{ page.title }}</h2>
+		{% endif %}
+		{{ page.content }}
+	</div>
+	<div class="grid">
+		<div class="scaler">
+			{% for tile in page.header.tiles %}
+				<div class="tile bw100">
+					<div class="imgWrap">
+						<a href="{{ base_url }}{{ tile.url }}"><img src="{{ page.url }}/{{ tile.image }}" /></a>
+					</div>
+					<div class="textWrap">
+						<h3>{{ tile.title }}</h3>
+						<p>{{ tile.blurb }}</p>
+						<a href="{{ tile.url }}" target="_blank">Learn More</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

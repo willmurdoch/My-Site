@@ -1,0 +1,21 @@
+<header class="hero">
+	<div class="centerer">
+		<div class="textWrap">
+			{% if page.header.displayTitle %}
+				<h1>{{ page.header.displayTitle }}</h1>
+			{% else %}
+				<h1>{{ page.title }}</h1>
+			{% endif %}
+			{% if page.header.subhead %}
+				<h2>{{ page.header.subhead }}</h2>
+			{% endif %}
+		</div>
+	</div>
+	{% if page.template == 'vidbg' %}
+	  {% if page.media.videos %}
+	    <video preload autoplay muted>
+	      <source src="{{ page.media.videos|first.url }}" type="video/mp4">
+	    </video>
+	  {% endif %}
+	{% endif %}
+</header>

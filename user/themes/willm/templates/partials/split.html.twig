@@ -1,0 +1,31 @@
+{% if page.active %}
+	<section class="split">
+		<div class="textWrap">
+			{% if page.header.displayTitle %}
+				<h2>{{ page.header.displayTitle }}</h2>
+			{% else %}
+				<h2>{{ page.title }}</h2>
+			{% endif %}
+			{{ page.content }}
+		</div>
+		{% if page.media.images %}
+			<img src="{{ page.media.images|first.url }}" />
+		{% endif %}
+	</section>
+
+{% else %}
+	<section class="split">
+		<div class="textWrap">
+			{% if page.header.displayTitle %}
+				<h2>{{ page.header.displayTitle }}</h2>
+			{% else %}
+				<h2>{{ page.title }}</h2>
+			{% endif %}
+			{{ page.content }}
+			<a class="cta" href="{{ page.url }}">Learn More</a>
+		</div>
+		{% if page.media.images %}
+			<img src="{{ page.media.images|first.url }}" />
+		{% endif %}
+	</section>
+{% endif %}

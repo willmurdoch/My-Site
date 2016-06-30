@@ -1,0 +1,14 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% set collection = page.collection() %}
+
+	{% block content %}
+		<!--<section class="top">
+			{{ page.content }}
+		</section>-->
+		{% for child in collection %}
+				{% include 'partials/modules.html.twig' with {'modular':page, 'page':child, 'truncate':false} %}
+		{% endfor %}
+	{% endblock %}
+
+{% endembed %}

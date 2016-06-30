@@ -1,0 +1,7 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% block content %}
+		{% include 'partials/split.html.twig' with {'modular':page.parent, 'truncate':false} %}
+	{% endblock %}
+
+{% endembed %}

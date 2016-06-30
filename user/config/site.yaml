@@ -1,0 +1,18 @@
+title: 'Will Murdoch'
+author:
+  name: 'Will Murdoch'
+  email: willmdev@gmail.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Lorem ipsum'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /grid
+grid:
+  route: /grid

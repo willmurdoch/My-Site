@@ -1,0 +1,42 @@
+/*Wrapper to keep elements flush with intended edge and balance top/bottom margin*/
+=makeGrid($sizes, $marginX, $marginY: $marginX)
+	display: table
+	width: calc(100% + #{$marginX}*2)
+	margin-left: #{-$marginX}
+
+	/*Generates all width assignments*/
+	@each $size, $i in $sizes
+		$sizeSelector: floor($size)
+		.bw#{$sizeSelector}
+			width: calc(#{$size}% - #{$marginX*2})
+			margin: #{$marginY} #{$marginX}
+
+	/*Generate query for tablet - any size under 50%, becomes 50%. Any size at or above 50% becomes 100%.*/
+	@media (max-width:$tablet)
+		@each $size, $i in $sizes
+			$sizeSelector: floor($size)
+			@if($sizeSelector < 20)
+				.bw#{$sizeSelector}
+					width: calc(25% - #{$marginX}*2)
+					margin: #{$marginY} #{$marginX}
+			@else if($sizeSelector < 50)
+				.bw#{$size}
+					width: calc(50% - #{$marginX}*2)
+					margin: #{$marginY} #{$marginX}
+			@else
+				.bw#{$sizeSelector}
+					width: calc(100% - #{$marginX}*2)
+					margin: #{$marginY} #{$marginX}
+
+	/*Generate query for mobile - all sizes take up the full screen width.*/
+	@media (max-width:$smartphone)
+		@each $size, $i in $sizes
+			$sizeSelector: floor($size)
+			@if($size < 20)
+				.bw#{$sizeSelector}
+					width: calc(50% - #{$marginX}*2)
+					margin: #{$marginY} #{$marginX}
+			@else
+				.bw#{$sizeSelector}
+					width: calc(100% - #{$marginX}*2)
+					margin: #{$marginY} #{$marginX}
